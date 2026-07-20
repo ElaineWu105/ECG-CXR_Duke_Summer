@@ -61,6 +61,7 @@ Main files: `7.20/train_latest_gated_history.py`, `7.20/train_latest_gated_histo
 7.18/                                sequence/change experiments
 7.19/                                label multi-positive objectives
 7.20/                                gated history and multiview/prototype runs
+数据预处理/                          catalog, pair, and frozen embedding builders
 Waveform_CXR_EHR/ECGCXRPatientTemporal/
                                       engine, losses, data, sampler, metrics
 results/                              aggregate de-identified metrics
@@ -73,6 +74,10 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## Data preprocessing
+
+The code used to clean ECG/CXR metadata, build temporal pairs, and generate frozen embedding caches is documented in `数据预处理/README.md`. Generated data and identifiers remain excluded.
 
 ## Required local inputs
 

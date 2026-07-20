@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+cache/
+pairs/
+catalogs/
+checkpoints/
+*.npy
+*_ids.json
+*.pt
+*.pth
+*.ckpt
