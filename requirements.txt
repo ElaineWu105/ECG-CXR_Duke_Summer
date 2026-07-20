@@ -1,0 +1,1 @@
+numpy>=1.23\npandas>=1.5\ntorch>=2.0\nmatplotlib>=3.6\n
