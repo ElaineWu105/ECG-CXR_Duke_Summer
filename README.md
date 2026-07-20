@@ -1,8 +1,20 @@
-# ECG-to-CXR Contrastive Learning: July 18-20
+# ECG-to-CXR Contrastive Learning: July 16-20
 
-This snapshot contains the main model and objective code for three days of ECG-to-CXR retrieval experiments using frozen ECG and CXR embeddings. Patient splits are disjoint.
+This snapshot contains the main model and objective code for five days of ECG-to-CXR retrieval experiments using frozen ECG and CXR embeddings. Patient splits are disjoint. Result files contain aggregate metrics only.
 
 No MIMIC data, embeddings, pair files, checkpoints, logs, or patient identifiers are included. MIMIC access and derived data remain subject to the PhysioNet data-use agreement.
+
+## July 16: milder anti-overfitting grid
+
+The complete three-case grid was rerun at `n=0,2,4,6,8,10,12`. Compared with July 15, sequence token dropout changed from `0.20` to `0.10`, pooled-vector dropout from `0.30` to `0.15`, weight decay from `3e-3` to `1e-3`, and early-stopping patience from 5 to 7. Unique-target sampling and shared embedding dropout remained enabled.
+
+The 21 runs restored fitting capacity, but sequence models still showed a larger train-validation gap than all-ECG and nearest-ECG models. Main files: `7.16/staged_model.py`, `7.16/run_three_cases_716.sh`, and `7.16/compare_716_when_ready.py`.
+
+## July 17: CLS pooling and time-gate diagnostics
+
+Sequence mean pooling was replaced by a trainable CLS token and compared with nearest ECG at `n=0,2,4,6`. A CLS-only control froze all other parameters. Diagnostic runs recorded CLS gradient norm, parameter drift, output diversity, and positive-negative cosine margin, then evaluated normal, zeroed, cross-patient-shuffled, and relative-time-shuffled ECG inputs. A gated-time variant learned a scalar gate for relative-time embeddings before Transformer aggregation.
+
+CLS and gated-time models did not consistently beat nearest ECG, suggesting that limited multi-ECG coverage and weak longitudinal supervision matter more than mean versus CLS pooling. Main files: `7.17/train_cls_diagnostics.py`, `7.17/train_gated_time_cls.py`, and `7.17/run_case2_cls_case3_n0_6.sh`.
 
 ## July 18: sequence and change diagnostics
 
@@ -44,6 +56,8 @@ Main files: `7.20/train_latest_gated_history.py`, `7.20/train_latest_gated_histo
 
 ```text
 7.15/staged_model.py                 shared model
+7.16/                                milder regularization and 21-run grid
+7.17/                                CLS pooling, diagnostics, gated time
 7.18/                                sequence/change experiments
 7.19/                                label multi-positive objectives
 7.20/                                gated history and multiview/prototype runs
@@ -80,6 +94,14 @@ export LABELS_CSV="$MIMIC_CXR_ROOT/mimic-cxr-2.0.0-chexpert.csv.gz"
 ## Main runs
 
 ```bash
+# July 16: three cases x seven temporal offsets
+CUDA_VISIBLE_DEVICES=0 bash 7.16/run_three_cases_716.sh
+
+# July 17: CLS pooling, diagnostics, and gated time
+CUDA_VISIBLE_DEVICES=0 bash 7.17/run_case2_cls_case3_n0_6.sh
+CUDA_VISIBLE_DEVICES=0 bash 7.17/run_cls_diagnostics_n2.sh
+CUDA_VISIBLE_DEVICES=0 bash 7.17/run_gated_time_cls_n024.sh
+
 # Pooled 24-hour gated-history baseline
 CUDA_VISIBLE_DEVICES=0 bash 7.20/run_latest_gated_history_natural.sh
 
@@ -95,7 +117,7 @@ The grid skips experiments that already contain `results.json`.
 
 ## Results
 
-See `results/three_cases_summary.csv`. Because query count and gallery size change across n, compare the three cases primarily within the same n.
+Aggregate results are in `results/`: `july16_mild_antioverfit_summary.csv`, `july17_cls_pool_summary.csv`, `july17_cls_diagnostics_ablation.csv`, and `three_cases_summary.csv`. Because query count and gallery size change across n, compare the three cases primarily within the same n.
 
 Best observed test values, not all from the same configuration:
 
