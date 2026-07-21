@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+<rect width="900" height="500" fill="white"/>
+<text x="450.0" y="32" text-anchor="middle" font-size="22" font-family="Arial" font-weight="bold">Criterion 2 nearest t1: pair count by n</text>
+<text x="450.0" y="58" text-anchor="middle" font-size="14" font-family="Arial" fill="#555">For each t2, choose the nearest prior CXR t1 within [t2-24h, t2).</text>
+<line x1="85" y1="90" x2="85" y2="425" stroke="#333" stroke-width="1"/>
+<line x1="85" y1="425" x2="865" y2="425" stroke="#333" stroke-width="1"/>
+<line x1="85" y1="425.0" x2="865" y2="425.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="75" y="429.0" text-anchor="end" font-size="12" font-family="Arial" fill="#555">0</text>
+<line x1="85" y1="358.0" x2="865" y2="358.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="75" y="362.0" text-anchor="end" font-size="12" font-family="Arial" fill="#555">1,865</text>
+<line x1="85" y1="291.0" x2="865" y2="291.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="75" y="295.0" text-anchor="end" font-size="12" font-family="Arial" fill="#555">3,731</text>
+<line x1="85" y1="224.0" x2="865" y2="224.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="75" y="228.0" text-anchor="end" font-size="12" font-family="Arial" fill="#555">5,596</text>
+<line x1="85" y1="157.0" x2="865" y2="157.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="75" y="161.0" text-anchor="end" font-size="12" font-family="Arial" fill="#555">7,462</text>
+<line x1="85" y1="90.0" x2="865" y2="90.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="75" y="94.0" text-anchor="end" font-size="12" font-family="Arial" fill="#555">9,327</text>
+<rect x="85.0" y="133.695652173913" width="96.0" height="291.304347826087" rx="4" fill="#4C78A8"/>
+<text x="133.0" y="125.695652173913" text-anchor="middle" font-size="12" font-family="Arial" fill="#333">8,111</text>
+<text x="133.0" y="450" text-anchor="middle" font-size="13" font-family="Arial" fill="#333">n=0</text>
+<rect x="199.0" y="218.45440705858388" width="96.0" height="206.54559294141612" rx="4" fill="#4C78A8"/>
+<text x="247.0" y="210.45440705858388" text-anchor="middle" font-size="12" font-family="Arial" fill="#333">5,751</text>
+<text x="247.0" y="450" text-anchor="middle" font-size="13" font-family="Arial" fill="#333">n=2</text>
+<rect x="313.0" y="242.91233590454186" width="96.0" height="182.08766409545814" rx="4" fill="#4C78A8"/>
+<text x="361.0" y="234.91233590454186" text-anchor="middle" font-size="12" font-family="Arial" fill="#333">5,070</text>
+<text x="361.0" y="450" text-anchor="middle" font-size="13" font-family="Arial" fill="#333">n=4</text>
+<rect x="427.0" y="259.4690248883695" width="96.0" height="165.53097511163048" rx="4" fill="#4C78A8"/>
+<text x="475.0" y="251.46902488836952" text-anchor="middle" font-size="12" font-family="Arial" fill="#333">4,609</text>
+<text x="475.0" y="450" text-anchor="middle" font-size="13" font-family="Arial" fill="#333">n=6</text>
+<rect x="541.0" y="276.38486113865764" width="96.0" height="148.61513886134236" rx="4" fill="#4C78A8"/>
+<text x="589.0" y="268.38486113865764" text-anchor="middle" font-size="12" font-family="Arial" fill="#333">4,138</text>
+<text x="589.0" y="450" text-anchor="middle" font-size="13" font-family="Arial" fill="#333">n=8</text>
+<rect x="655.0" y="293.9471624685746" width="96.0" height="131.05283753142538" rx="4" fill="#4C78A8"/>
+<text x="703.0" y="285.9471624685746" text-anchor="middle" font-size="12" font-family="Arial" fill="#333">3,649</text>
+<text x="703.0" y="450" text-anchor="middle" font-size="13" font-family="Arial" fill="#333">n=10</text>
+<rect x="769.0" y="312.55099087122693" width="96.0" height="112.44900912877306" rx="4" fill="#4C78A8"/>
+<text x="817.0" y="304.55099087122693" text-anchor="middle" font-size="12" font-family="Arial" fill="#333">3,131</text>
+<text x="817.0" y="450" text-anchor="middle" font-size="13" font-family="Arial" fill="#333">n=12</text>
+<text x="475.0" y="478" text-anchor="middle" font-size="14" font-family="Arial" fill="#333">n hours</text>
+<text x="22" y="257.5" text-anchor="middle" font-size="14" font-family="Arial" fill="#333" transform="rotate(-90 22 257.5)">Pair count</text>
+</svg>

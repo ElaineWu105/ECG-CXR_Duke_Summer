@@ -22,6 +22,7 @@ from torch.utils.data import DataLoader, Dataset
 
 EXP_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(EXP_DIR))
+sys.path.insert(0, str(EXP_DIR.parent))
 
 import config as C  # noqa: E402
 from io_utils import load_ecg  # noqa: E402
@@ -77,7 +78,7 @@ def _collate(batch):
 
 
 def precompute_cxr(cxr_meta, ckpt, device, batch_size, num_workers, max_items=None):
-    from encoders.biovil_t import BioViLTCXREncoder, BIOVIL_T_CENTER_CROP, get_biovil_t_transform
+    from encoder.biovil_t import BioViLTCXREncoder, BIOVIL_T_CENTER_CROP, get_biovil_t_transform
 
     enc = BioViLTCXREncoder(ckpt).to(device).eval()
     ids = [d for d, m in cxr_meta.items() if m.get("path_ok", True)]
@@ -111,7 +112,7 @@ def precompute_cxr(cxr_meta, ckpt, device, batch_size, num_workers, max_items=No
 
 def precompute_ecg(ecg_meta, ckpt, config_path, device, batch_size, num_workers,
                    sig_len, max_items=None):
-    from encoders.ecg_coca import ECGCoCaEncoder
+    from encoder.ecg_coca import ECGCoCaEncoder
 
     enc = ECGCoCaEncoder(ckpt, config_path).to(device).eval()
     ids = list(ecg_meta.keys())

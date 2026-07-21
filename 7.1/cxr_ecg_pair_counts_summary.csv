@@ -1,0 +1,8 @@
+n_hours,criterion1_pair_count,criterion1_cxr_with_at_least_one_ecg,criterion2_nearest_pair_count,criterion2_nearest_cxr_with_at_least_one_ecg,criterion2_earliest_pair_count,criterion2_earliest_cxr_with_at_least_one_ecg,criterion2_all_t1_pair_or_triple_count,criterion2_all_t1_windows_with_at_least_one_ecg
+0,83690,74489,8111,6997,9215,7800,11268,9582
+2,37226,32875,5751,5019,7039,6017,8572,7350
+4,23591,20279,5070,4414,6535,5538,7848,6675
+6,20273,17250,4609,4027,6156,5220,7230,6160
+8,19386,16431,4138,3593,5725,4829,6585,5578
+10,19244,16330,3649,3177,5221,4412,5851,4970
+12,19501,16674,3131,2764,4562,3919,4985,4301
