@@ -1,8 +1,12 @@
-# ECG-to-CXR Contrastive Learning: July 16-20
+# ECG-to-CXR Contrastive Learning: June 30-July 20
 
-This snapshot contains the main model and objective code for five days of ECG-to-CXR retrieval experiments using frozen ECG and CXR embeddings. Patient splits are disjoint. Result files contain aggregate metrics only.
+This snapshot contains the main model, preprocessing, diagnostics, and objective code for experiments conducted from June 30 through July 20 of ECG-to-CXR retrieval experiments using frozen ECG and CXR embeddings. Patient splits are disjoint. Result files contain aggregate metrics only.
 
 No MIMIC data, embeddings, pair files, checkpoints, logs, or patient identifiers are included. MIMIC access and derived data remain subject to the PhysioNet data-use agreement.
+
+## Earlier experiments: June 30-July 15
+
+The repository now includes the complete preprocessing and experiment progression beginning June 30. Coverage includes modality overlap and timestamp checks, temporal-pair statistics, three-case pair construction, the first 21-run contrastive grid, batch-level train/validation diagnostics, six-label downstream evaluation, label-policy comparisons, and the July 15 anti-overfitting grid. See EXPERIMENT_HISTORY.md for the dated index.
 
 ## July 16: milder anti-overfitting grid
 
@@ -55,13 +59,15 @@ Main files: `7.20/train_latest_gated_history.py`, `7.20/train_latest_gated_histo
 ## Layout
 
 ```text
-7.15/staged_model.py                 shared model
+6.30-7.14/                           data checks, pairing, initial grids, downstream evaluation
+7.15/                                stronger anti-overfitting grid
 7.16/                                milder regularization and 21-run grid
 7.17/                                CLS pooling, diagnostics, gated time
 7.18/                                sequence/change experiments
 7.19/                                label multi-positive objectives
 7.20/                                gated history and multiview/prototype runs
 data_preprocessing/                          catalog, pair, and frozen embedding builders
+encoder/                             isolated BioViL-T and ECG-CoCa wrappers
 Waveform_CXR_EHR/ECGCXRPatientTemporal/
                                       engine, losses, data, sampler, metrics
 results/                              aggregate de-identified metrics

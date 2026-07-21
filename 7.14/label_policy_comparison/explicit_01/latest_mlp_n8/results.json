@@ -1,0 +1,423 @@
+{
+  "n_offset_hours": 8,
+  "model": "latest_mlp",
+  "pair_file": "7.14/classification_pairs/seq_n8.json",
+  "label_policy": "explicit_01",
+  "selection_metric": "validation macro-AUROC",
+  "split_sizes": {
+    "train": 9195,
+    "val": 1975,
+    "test": 2001
+  },
+  "unique_patients": {
+    "train": 5720,
+    "val": 1235,
+    "test": 1242
+  },
+  "training": {
+    "best_epoch": 11,
+    "best_val_macro_auroc": 0.608828433986092,
+    "pos_weight": [
+      1.2069672346115112,
+      0.3841387927532196,
+      0.04847731441259384,
+      5.620168209075928,
+      0.4721345901489258,
+      0.7035176157951355
+    ],
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5805136561393738,
+        "macro_auroc": 0.569509956894444,
+        "macro_auprc": 0.6415005714710699,
+        "micro_auroc": 0.5533004958533563,
+        "micro_auprc": 0.6094355287134858
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.5601984858512878,
+        "macro_auroc": 0.5844067635791735,
+        "macro_auprc": 0.6572607020154263,
+        "micro_auroc": 0.5764494018857045,
+        "micro_auprc": 0.6355743605955344
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.5493918392393324,
+        "macro_auroc": 0.5968552306062095,
+        "macro_auprc": 0.6644845354709963,
+        "micro_auroc": 0.5938471185068578,
+        "micro_auprc": 0.6510282488125594
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.542965312798818,
+        "macro_auroc": 0.6006286212948327,
+        "macro_auprc": 0.6679185948608742,
+        "micro_auroc": 0.6065459610027855,
+        "micro_auprc": 0.6623702761683953
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.5350739227400886,
+        "macro_auroc": 0.6003708280364495,
+        "macro_auprc": 0.6673323094352589,
+        "micro_auroc": 0.6112313713053027,
+        "micro_auprc": 0.6660545321533256
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.5291512029038535,
+        "macro_auroc": 0.6042792938461898,
+        "macro_auprc": 0.6691423050611426,
+        "micro_auroc": 0.6238050857346311,
+        "micro_auprc": 0.6759809539482018
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.5238644414477878,
+        "macro_auroc": 0.6047199451410868,
+        "macro_auprc": 0.6702786137903862,
+        "micro_auroc": 0.6243887317634658,
+        "micro_auprc": 0.6781098654859211
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.5166397078169717,
+        "macro_auroc": 0.6052927060262823,
+        "macro_auprc": 0.6692664533445029,
+        "micro_auroc": 0.629141888602468,
+        "micro_auprc": 0.6820653710081075
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.5096965051359601,
+        "macro_auroc": 0.6053275869598288,
+        "macro_auprc": 0.6690022815458523,
+        "micro_auroc": 0.6356510057475563,
+        "micro_auprc": 0.6861869814423696
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.5039936436547173,
+        "macro_auroc": 0.6067245904257438,
+        "macro_auprc": 0.6695592405947378,
+        "micro_auroc": 0.6446602265427084,
+        "micro_auprc": 0.6938675895853399
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.4965173022614585,
+        "macro_auroc": 0.608828433986092,
+        "macro_auprc": 0.6710747582522689,
+        "micro_auroc": 0.6462037576460622,
+        "micro_auprc": 0.694796634711709
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.49082914491494495,
+        "macro_auroc": 0.6064791016879904,
+        "macro_auprc": 0.6691577473225193,
+        "micro_auroc": 0.6489081694629388,
+        "micro_auprc": 0.6958988843048578
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.4851866232024299,
+        "macro_auroc": 0.6042084431465052,
+        "macro_auprc": 0.6672777440582291,
+        "micro_auroc": 0.6555284165732391,
+        "micro_auprc": 0.70059805975352
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.47877853280968136,
+        "macro_auroc": 0.6059513871553461,
+        "macro_auprc": 0.6687684903719605,
+        "micro_auroc": 0.6566149256946584,
+        "micro_auprc": 0.7017037066207631
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.47179590662320453,
+        "macro_auroc": 0.6053544736551554,
+        "macro_auprc": 0.6676988621442037,
+        "micro_auroc": 0.6604063809116334,
+        "micro_auprc": 0.7036690067007979
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.46628909475273556,
+        "macro_auroc": 0.6070352460501424,
+        "macro_auprc": 0.6678593878004944,
+        "micro_auroc": 0.6606970285129572,
+        "micro_auprc": 0.7022500501437008
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.4601577967405319,
+        "macro_auroc": 0.6076623855370208,
+        "macro_auprc": 0.6686595296591502,
+        "micro_auroc": 0.6655168633310864,
+        "micro_auprc": 0.7058949774654375
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.45524538225597805,
+        "macro_auroc": 0.6062466653334396,
+        "macro_auprc": 0.6688996173997755,
+        "micro_auroc": 0.66490287027329,
+        "micro_auprc": 0.7056258865822895
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.4484455668263965,
+        "macro_auroc": 0.6043951894168217,
+        "macro_auprc": 0.6676540671924297,
+        "micro_auroc": 0.6679589443166212,
+        "micro_auprc": 0.7063532770945644
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.4430116464694341,
+        "macro_auroc": 0.6049867377170598,
+        "macro_auprc": 0.6682171266722546,
+        "micro_auroc": 0.6694538560601948,
+        "micro_auprc": 0.7089148110067323
+      },
+      {
+        "epoch": 21,
+        "train_loss": 0.43838648829195237,
+        "macro_auroc": 0.6023865432568953,
+        "macro_auprc": 0.6661950589661776,
+        "micro_auroc": 0.6672231357200347,
+        "micro_auprc": 0.7076165338762461
+      },
+      {
+        "epoch": 22,
+        "train_loss": 0.4336286716991001,
+        "macro_auroc": 0.6020850491809991,
+        "macro_auprc": 0.6647986886666626,
+        "micro_auroc": 0.6723609732078476,
+        "micro_auprc": 0.7074150970128921
+      },
+      {
+        "epoch": 23,
+        "train_loss": 0.42742013600137496,
+        "macro_auroc": 0.6010623786576229,
+        "macro_auprc": 0.6638927290568831,
+        "micro_auroc": 0.6704377836752646,
+        "micro_auprc": 0.7075081940802682
+      },
+      {
+        "epoch": 24,
+        "train_loss": 0.4228375520971086,
+        "macro_auroc": 0.6016621107379363,
+        "macro_auprc": 0.6646047829906971,
+        "micro_auroc": 0.6712326834937381,
+        "micro_auprc": 0.7058980785276769
+      },
+      {
+        "epoch": 25,
+        "train_loss": 0.41659459306134117,
+        "macro_auroc": 0.5986230022432655,
+        "macro_auprc": 0.6626005706798196,
+        "micro_auroc": 0.6784209756954491,
+        "micro_auprc": 0.71435404382664
+      },
+      {
+        "epoch": 26,
+        "train_loss": 0.4125893496804767,
+        "macro_auroc": 0.5964556555132889,
+        "macro_auprc": 0.6621347483018593,
+        "micro_auroc": 0.6699443238874286,
+        "micro_auprc": 0.7055387465310426
+      }
+    ]
+  },
+  "thresholds": {
+    "pneumonia": 0.10663007199764252,
+    "consolidation": 0.2541102170944214,
+    "lung_opacity": 0.22592207789421082,
+    "pneumothorax": 0.4988001883029938,
+    "pleural_effusion": 0.2435920238494873,
+    "pulmonary_edema": 0.2185257226228714
+  },
+  "validation": {
+    "summary": {
+      "macro_auroc": 0.608828433986092,
+      "macro_auprc": 0.6710747582522689,
+      "micro_auroc": 0.6462037576460622,
+      "micro_auprc": 0.694796634711709
+    },
+    "per_label": [
+      {
+        "label": "pneumonia",
+        "n": 454,
+        "n_positive": 208,
+        "n_negative": 246,
+        "prevalence": 0.4581497797356828,
+        "auroc": 0.6023393527204502,
+        "auprc": 0.5662804338435876,
+        "threshold": 0.10663007199764252,
+        "f1": 0.6283987915407855,
+        "sensitivity": 1.0,
+        "specificity": 0.0
+      },
+      {
+        "label": "consolidation",
+        "n": 257,
+        "n_positive": 192,
+        "n_negative": 65,
+        "prevalence": 0.7470817120622568,
+        "auroc": 0.6896634615384615,
+        "auprc": 0.8535738272492714,
+        "threshold": 0.2541102170944214,
+        "f1": 0.8687782805429864,
+        "sensitivity": 1.0,
+        "specificity": 0.1076923076923077
+      },
+      {
+        "label": "lung_opacity",
+        "n": 720,
+        "n_positive": 685,
+        "n_negative": 35,
+        "prevalence": 0.9513888888888888,
+        "auroc": 0.5361835245046924,
+        "auprc": 0.957954234732006,
+        "threshold": 0.22592207789421082,
+        "f1": 0.9750889679715302,
+        "sensitivity": 1.0,
+        "specificity": 0.0
+      },
+      {
+        "label": "pneumothorax",
+        "n": 838,
+        "n_positive": 130,
+        "n_negative": 708,
+        "prevalence": 0.15513126491646778,
+        "auroc": 0.5441003911342894,
+        "auprc": 0.18628133874487468,
+        "threshold": 0.4988001883029938,
+        "f1": 0.28110599078341014,
+        "sensitivity": 0.46923076923076923,
+        "specificity": 0.6567796610169492
+      },
+      {
+        "label": "pleural_effusion",
+        "n": 1202,
+        "n_positive": 779,
+        "n_negative": 423,
+        "prevalence": 0.6480865224625624,
+        "auroc": 0.6506310751797327,
+        "auprc": 0.7665620798849848,
+        "threshold": 0.2435920238494873,
+        "f1": 0.7887468030690538,
+        "sensitivity": 0.9897304236200257,
+        "specificity": 0.0425531914893617
+      },
+      {
+        "label": "pulmonary_edema",
+        "n": 904,
+        "n_positive": 519,
+        "n_negative": 385,
+        "prevalence": 0.5741150442477876,
+        "auroc": 0.630052798838926,
+        "auprc": 0.6957966350588887,
+        "threshold": 0.2185257226228714,
+        "f1": 0.7321937321937322,
+        "sensitivity": 0.9903660886319846,
+        "specificity": 0.03636363636363636
+      }
+    ]
+  },
+  "test": {
+    "summary": {
+      "macro_auroc": 0.5910279653276321,
+      "macro_auprc": 0.6601688375291975,
+      "micro_auroc": 0.6496768860451567,
+      "micro_auprc": 0.7095944765585298
+    },
+    "per_label": [
+      {
+        "label": "pneumonia",
+        "n": 453,
+        "n_positive": 209,
+        "n_negative": 244,
+        "prevalence": 0.4613686534216336,
+        "auroc": 0.5615930661228332,
+        "auprc": 0.5118614769969569,
+        "threshold": 0.10663007199764252,
+        "f1": 0.6314199395770392,
+        "sensitivity": 1.0,
+        "specificity": 0.0
+      },
+      {
+        "label": "consolidation",
+        "n": 239,
+        "n_positive": 175,
+        "n_negative": 64,
+        "prevalence": 0.7322175732217573,
+        "auroc": 0.5873660714285714,
+        "auprc": 0.812776162948067,
+        "threshold": 0.2541102170944214,
+        "f1": 0.8390243902439024,
+        "sensitivity": 0.9828571428571429,
+        "specificity": 0.015625
+      },
+      {
+        "label": "lung_opacity",
+        "n": 754,
+        "n_positive": 719,
+        "n_negative": 35,
+        "prevalence": 0.9535809018567639,
+        "auroc": 0.6087025630836479,
+        "auprc": 0.9689106902423569,
+        "threshold": 0.22592207789421082,
+        "f1": 0.9769021739130435,
+        "sensitivity": 1.0,
+        "specificity": 0.02857142857142857
+      },
+      {
+        "label": "pneumothorax",
+        "n": 843,
+        "n_positive": 126,
+        "n_negative": 717,
+        "prevalence": 0.1494661921708185,
+        "auroc": 0.5170795421841448,
+        "auprc": 0.17607402438815667,
+        "threshold": 0.4988001883029938,
+        "f1": 0.21390374331550802,
+        "sensitivity": 0.31746031746031744,
+        "specificity": 0.7099023709902371
+      },
+      {
+        "label": "pleural_effusion",
+        "n": 1226,
+        "n_positive": 835,
+        "n_negative": 391,
+        "prevalence": 0.6810766721044046,
+        "auroc": 0.6490206288190881,
+        "auprc": 0.7940595428457722,
+        "threshold": 0.2435920238494873,
+        "f1": 0.8092885375494071,
+        "sensitivity": 0.9808383233532935,
+        "specificity": 0.05370843989769821
+      },
+      {
+        "label": "pulmonary_edema",
+        "n": 887,
+        "n_positive": 522,
+        "n_negative": 365,
+        "prevalence": 0.588500563697858,
+        "auroc": 0.6224059203275074,
+        "auprc": 0.6973311277538754,
+        "threshold": 0.2185257226228714,
+        "f1": 0.7431457431457431,
+        "sensitivity": 0.9865900383141762,
+        "specificity": 0.043835616438356165
+      }
+    ]
+  }
+}

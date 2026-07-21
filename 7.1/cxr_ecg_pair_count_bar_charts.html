@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CXR-ECG Pair Count Bar Charts</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 32px;
+    background: #fafafa;
+    color: #222;
+}
+.chart-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+h1 {
+    margin-bottom: 8px;
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.subtitle {
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+.note {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<h1>CXR–ECG Pair Count Bar Charts</h1>
+<p class="note">
+These charts show the basic pair-count results by n. They are based on
+cxr_ecg_pair_counts_summary.csv. The y-axis is the number of CXR–ECG pairs.
+</p>
+
+<div class="chart-card">
+<h2>Criterion 1: CXR–ECG pair count by n</h2>
+<p class="subtitle">CXR at time t; ECG in [t-12-n, t-n].</p>
+<svg width="900" height="460" viewBox="0 0 900 460">
+<rect x="0" y="0" width="900" height="460" fill="white"/>
+<line x1="80" y1="70" x2="80" y2="390" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="390" x2="870" y2="390" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="390.0" x2="870" y2="390.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="394.0" text-anchor="end" font-size="12" fill="#555">0</text>
+<line x1="80" y1="326.0" x2="870" y2="326.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="330.0" text-anchor="end" font-size="12" fill="#555">18,746</text>
+<line x1="80" y1="262.0" x2="870" y2="262.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="266.0" text-anchor="end" font-size="12" fill="#555">37,493</text>
+<line x1="80" y1="197.99999999999997" x2="870" y2="197.99999999999997" stroke="#eee" stroke-width="1"/>
+<text x="70" y="201.99999999999997" text-anchor="end" font-size="12" fill="#555">56,239</text>
+<line x1="80" y1="134.0" x2="870" y2="134.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="138.0" text-anchor="end" font-size="12" fill="#555">74,986</text>
+<line x1="80" y1="70.0" x2="870" y2="70.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="74.0" text-anchor="end" font-size="12" fill="#555">93,732</text>
+<rect x="80.0" y="104.28571428571433" width="97.42857142857143" height="285.71428571428567" rx="4" fill="#4C78A8"/>
+<text x="128.71428571428572" y="96.28571428571433" text-anchor="middle" font-size="12" fill="#333">83,690</text>
+<text x="128.71428571428572" y="415" text-anchor="middle" font-size="13" fill="#333">n=0</text>
+<rect x="195.42857142857144" y="262.91193691002513" width="97.42857142857143" height="127.0880630899749" rx="4" fill="#4C78A8"/>
+<text x="244.14285714285717" y="254.91193691002513" text-anchor="middle" font-size="12" fill="#333">37,226</text>
+<text x="244.14285714285717" y="415" text-anchor="middle" font-size="13" fill="#333">n=2</text>
+<rect x="310.8571428571429" y="309.4612771623167" width="97.42857142857143" height="80.53872283768328" rx="4" fill="#4C78A8"/>
+<text x="359.5714285714286" y="301.4612771623167" text-anchor="middle" font-size="12" fill="#333">23,591</text>
+<text x="359.5714285714286" y="415" text-anchor="middle" font-size="13" fill="#333">n=4</text>
+<rect x="426.2857142857143" y="320.7887953843265" width="97.42857142857143" height="69.2112046156735" rx="4" fill="#4C78A8"/>
+<text x="475.0" y="312.7887953843265" text-anchor="middle" font-size="12" fill="#333">20,273</text>
+<text x="475.0" y="415" text-anchor="middle" font-size="13" fill="#333">n=6</text>
+<rect x="541.7142857142858" y="323.8169776214943" width="97.42857142857143" height="66.18302237850571" rx="4" fill="#4C78A8"/>
+<text x="590.4285714285714" y="315.8169776214943" text-anchor="middle" font-size="12" fill="#333">19,386</text>
+<text x="590.4285714285714" y="415" text-anchor="middle" font-size="13" fill="#333">n=8</text>
+<rect x="657.1428571428571" y="324.30175989621563" width="97.42857142857143" height="65.69824010378437" rx="4" fill="#4C78A8"/>
+<text x="705.8571428571428" y="316.30175989621563" text-anchor="middle" font-size="12" fill="#333">19,244</text>
+<text x="705.8571428571428" y="415" text-anchor="middle" font-size="13" fill="#333">n=10</text>
+<rect x="772.5714285714286" y="323.42437225816366" width="97.42857142857143" height="66.57562774183637" rx="4" fill="#4C78A8"/>
+<text x="821.2857142857142" y="315.42437225816366" text-anchor="middle" font-size="12" fill="#333">19,501</text>
+<text x="821.2857142857142" y="415" text-anchor="middle" font-size="13" fill="#333">n=12</text>
+<text x="475.0" y="440" text-anchor="middle" font-size="14" fill="#333">n hours</text>
+<text x="20" y="230.0" text-anchor="middle" font-size="14" fill="#333" transform="rotate(-90 20 230.0)">Pair count</text>
+</svg>
+</div>
+<div class="chart-card">
+<h2>Criterion 2 nearest t1: pair count by n</h2>
+<p class="subtitle">For each t2, choose the nearest prior CXR t1 within [t2-24h, t2).</p>
+<svg width="900" height="460" viewBox="0 0 900 460">
+<rect x="0" y="0" width="900" height="460" fill="white"/>
+<line x1="80" y1="70" x2="80" y2="390" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="390" x2="870" y2="390" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="390.0" x2="870" y2="390.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="394.0" text-anchor="end" font-size="12" fill="#555">0</text>
+<line x1="80" y1="326.0" x2="870" y2="326.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="330.0" text-anchor="end" font-size="12" fill="#555">1,816</text>
+<line x1="80" y1="262.0" x2="870" y2="262.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="266.0" text-anchor="end" font-size="12" fill="#555">3,633</text>
+<line x1="80" y1="197.99999999999997" x2="870" y2="197.99999999999997" stroke="#eee" stroke-width="1"/>
+<text x="70" y="201.99999999999997" text-anchor="end" font-size="12" fill="#555">5,450</text>
+<line x1="80" y1="134.00000000000003" x2="870" y2="134.00000000000003" stroke="#eee" stroke-width="1"/>
+<text x="70" y="138.00000000000003" text-anchor="end" font-size="12" fill="#555">7,267</text>
+<line x1="80" y1="70.0" x2="870" y2="70.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="74.0" text-anchor="end" font-size="12" fill="#555">9,084</text>
+<rect x="80.0" y="104.28571428571433" width="97.42857142857143" height="285.71428571428567" rx="4" fill="#4C78A8"/>
+<text x="128.71428571428572" y="96.28571428571433" text-anchor="middle" font-size="12" fill="#333">8,111</text>
+<text x="128.71428571428572" y="415" text-anchor="middle" font-size="13" fill="#333">n=0</text>
+<rect x="195.42857142857144" y="187.41796854360044" width="97.42857142857143" height="202.58203145639956" rx="4" fill="#4C78A8"/>
+<text x="244.14285714285717" y="179.41796854360044" text-anchor="middle" font-size="12" fill="#333">5,751</text>
+<text x="244.14285714285717" y="415" text-anchor="middle" font-size="13" fill="#333">n=2</text>
+<rect x="310.8571428571429" y="211.4065554714057" width="97.42857142857143" height="178.5934445285943" rx="4" fill="#4C78A8"/>
+<text x="359.5714285714286" y="203.4065554714057" text-anchor="middle" font-size="12" fill="#333">5,070</text>
+<text x="359.5714285714286" y="415" text-anchor="middle" font-size="13" fill="#333">n=4</text>
+<rect x="426.2857142857143" y="227.64552547686566" width="97.42857142857143" height="162.35447452313434" rx="4" fill="#4C78A8"/>
+<text x="475.0" y="219.64552547686566" text-anchor="middle" font-size="12" fill="#333">4,609</text>
+<text x="475.0" y="415" text-anchor="middle" font-size="13" fill="#333">n=6</text>
+<rect x="541.7142857142858" y="244.23675079697767" width="97.42857142857143" height="145.76324920302233" rx="4" fill="#4C78A8"/>
+<text x="590.4285714285714" y="236.23675079697767" text-anchor="middle" font-size="12" fill="#333">4,138</text>
+<text x="590.4285714285714" y="415" text-anchor="middle" font-size="13" fill="#333">n=8</text>
+<rect x="657.1428571428571" y="261.4620356834634" width="97.42857142857143" height="128.5379643165366" rx="4" fill="#4C78A8"/>
+<text x="705.8571428571428" y="253.4620356834634" text-anchor="middle" font-size="12" fill="#333">3,649</text>
+<text x="705.8571428571428" y="415" text-anchor="middle" font-size="13" fill="#333">n=10</text>
+<rect x="772.5714285714286" y="279.7088609824401" width="97.42857142857143" height="110.29113901755991" rx="4" fill="#4C78A8"/>
+<text x="821.2857142857142" y="271.7088609824401" text-anchor="middle" font-size="12" fill="#333">3,131</text>
+<text x="821.2857142857142" y="415" text-anchor="middle" font-size="13" fill="#333">n=12</text>
+<text x="475.0" y="440" text-anchor="middle" font-size="14" fill="#333">n hours</text>
+<text x="20" y="230.0" text-anchor="middle" font-size="14" fill="#333" transform="rotate(-90 20 230.0)">Pair count</text>
+</svg>
+</div>
+<div class="chart-card">
+<h2>Criterion 2 earliest t1: pair count by n</h2>
+<p class="subtitle">For each t2, choose the earliest prior CXR t1 within [t2-24h, t2), closest to t2-24h.</p>
+<svg width="900" height="460" viewBox="0 0 900 460">
+<rect x="0" y="0" width="900" height="460" fill="white"/>
+<line x1="80" y1="70" x2="80" y2="390" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="390" x2="870" y2="390" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="390.0" x2="870" y2="390.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="394.0" text-anchor="end" font-size="12" fill="#555">0</text>
+<line x1="80" y1="326.0" x2="870" y2="326.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="330.0" text-anchor="end" font-size="12" fill="#555">2,064</text>
+<line x1="80" y1="262.0" x2="870" y2="262.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="266.0" text-anchor="end" font-size="12" fill="#555">4,128</text>
+<line x1="80" y1="198.0" x2="870" y2="198.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="202.0" text-anchor="end" font-size="12" fill="#555">6,192</text>
+<line x1="80" y1="134.0" x2="870" y2="134.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="138.0" text-anchor="end" font-size="12" fill="#555">8,256</text>
+<line x1="80" y1="70.0" x2="870" y2="70.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="74.0" text-anchor="end" font-size="12" fill="#555">10,320</text>
+<rect x="80.0" y="104.28571428571433" width="97.42857142857143" height="285.71428571428567" rx="4" fill="#F58518"/>
+<text x="128.71428571428572" y="96.28571428571433" text-anchor="middle" font-size="12" fill="#333">9,215</text>
+<text x="128.71428571428572" y="415" text-anchor="middle" font-size="13" fill="#333">n=0</text>
+<rect x="195.42857142857144" y="171.75335245329822" width="97.42857142857143" height="218.24664754670178" rx="4" fill="#F58518"/>
+<text x="244.14285714285717" y="163.75335245329822" text-anchor="middle" font-size="12" fill="#333">7,039</text>
+<text x="244.14285714285717" y="415" text-anchor="middle" font-size="13" fill="#333">n=2</text>
+<rect x="310.8571428571429" y="187.38004805829007" width="97.42857142857143" height="202.61995194170993" rx="4" fill="#F58518"/>
+<text x="359.5714285714286" y="179.38004805829007" text-anchor="middle" font-size="12" fill="#333">6,535</text>
+<text x="359.5714285714286" y="415" text-anchor="middle" font-size="13" fill="#333">n=4</text>
+<rect x="426.2857142857143" y="199.13107511045655" width="97.42857142857143" height="190.86892488954345" rx="4" fill="#F58518"/>
+<text x="475.0" y="191.13107511045655" text-anchor="middle" font-size="12" fill="#333">6,156</text>
+<text x="475.0" y="415" text-anchor="middle" font-size="13" fill="#333">n=6</text>
+<rect x="541.7142857142858" y="212.49438028059842" width="97.42857142857143" height="177.50561971940158" rx="4" fill="#F58518"/>
+<text x="590.4285714285714" y="204.49438028059842" text-anchor="middle" font-size="12" fill="#333">5,725</text>
+<text x="590.4285714285714" y="415" text-anchor="middle" font-size="13" fill="#333">n=8</text>
+<rect x="657.1428571428571" y="228.12107588559027" width="97.42857142857143" height="161.87892411440973" rx="4" fill="#F58518"/>
+<text x="705.8571428571428" y="220.12107588559027" text-anchor="middle" font-size="12" fill="#333">5,221</text>
+<text x="705.8571428571428" y="415" text-anchor="middle" font-size="13" fill="#333">n=10</text>
+<rect x="772.5714285714286" y="248.55360049608558" width="97.42857142857143" height="141.44639950391442" rx="4" fill="#F58518"/>
+<text x="821.2857142857142" y="240.55360049608558" text-anchor="middle" font-size="12" fill="#333">4,562</text>
+<text x="821.2857142857142" y="415" text-anchor="middle" font-size="13" fill="#333">n=12</text>
+<text x="475.0" y="440" text-anchor="middle" font-size="14" fill="#333">n hours</text>
+<text x="20" y="230.0" text-anchor="middle" font-size="14" fill="#333" transform="rotate(-90 20 230.0)">Pair count</text>
+</svg>
+</div>
+<div class="chart-card">
+<h2>Criterion 2 comparison: nearest vs earliest vs all t1</h2>
+<p class="subtitle">Grouped bar chart comparing the three interpretations of t1 selection.</p>
+<svg width="1000" height="500" viewBox="0 0 1000 500">
+<rect x="0" y="0" width="1000" height="500" fill="white"/>
+<line x1="80" y1="80" x2="80" y2="420" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="420" x2="960" y2="420" stroke="#333" stroke-width="1"/>
+<line x1="80" y1="420.0" x2="960" y2="420.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="424.0" text-anchor="end" font-size="12" fill="#555">0</text>
+<line x1="80" y1="352.0" x2="960" y2="352.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="356.0" text-anchor="end" font-size="12" fill="#555">2,591</text>
+<line x1="80" y1="284.0" x2="960" y2="284.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="288.0" text-anchor="end" font-size="12" fill="#555">5,183</text>
+<line x1="80" y1="215.99999999999997" x2="960" y2="215.99999999999997" stroke="#eee" stroke-width="1"/>
+<text x="70" y="219.99999999999997" text-anchor="end" font-size="12" fill="#555">7,774</text>
+<line x1="80" y1="148.0" x2="960" y2="148.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="152.0" text-anchor="end" font-size="12" fill="#555">10,366</text>
+<line x1="80" y1="80.0" x2="960" y2="80.0" stroke="#eee" stroke-width="1"/>
+<text x="70" y="84.0" text-anchor="end" font-size="12" fill="#555">12,958</text>
+<rect x="80.0" y="207.18186167831948" width="31.142857142857142" height="212.81813832168052" rx="3" fill="#4C78A8"/>
+<text x="95.57142857142857" y="202.18186167831948" text-anchor="middle" font-size="10" fill="#333">8,111</text>
+<rect x="116.14285714285714" y="178.21487552283494" width="31.142857142857142" height="241.78512447716506" rx="3" fill="#F58518"/>
+<text x="131.71428571428572" y="173.21487552283494" text-anchor="middle" font-size="10" fill="#333">9,215</text>
+<rect x="152.28571428571428" y="124.3478260869565" width="31.142857142857142" height="295.6521739130435" rx="3" fill="#54A24B"/>
+<text x="167.85714285714286" y="119.3478260869565" text-anchor="middle" font-size="10" fill="#333">11,268</text>
+<text x="131.71428571428572" y="445" text-anchor="middle" font-size="13" fill="#333">n=0</text>
+<rect x="209.42857142857144" y="269.1040422280872" width="31.142857142857142" height="150.89595777191278" rx="3" fill="#4C78A8"/>
+<text x="225.00000000000003" y="264.1040422280872" text-anchor="middle" font-size="10" fill="#333">5,751</text>
+<rect x="245.57142857142858" y="235.30922504668854" width="31.142857142857142" height="184.69077495331146" rx="3" fill="#F58518"/>
+<text x="261.14285714285717" y="230.30922504668854" text-anchor="middle" font-size="10" fill="#333">7,039</text>
+<rect x="281.7142857142857" y="195.08604590143693" width="31.142857142857142" height="224.91395409856307" rx="3" fill="#54A24B"/>
+<text x="297.2857142857143" y="190.08604590143693" text-anchor="middle" font-size="10" fill="#333">8,572</text>
+<text x="261.14285714285717" y="445" text-anchor="middle" font-size="13" fill="#333">n=2</text>
+<rect x="338.8571428571429" y="286.9722646663888" width="31.142857142857142" height="133.02773533361116" rx="3" fill="#4C78A8"/>
+<text x="354.42857142857144" y="281.9722646663888" text-anchor="middle" font-size="10" fill="#333">5,070</text>
+<rect x="375.0" y="248.53328394375762" width="31.142857142857142" height="171.46671605624238" rx="3" fill="#F58518"/>
+<text x="390.57142857142856" y="243.53328394375762" text-anchor="middle" font-size="10" fill="#333">6,535</text>
+<rect x="411.14285714285717" y="214.08251145992497" width="31.142857142857142" height="205.91748854007503" rx="3" fill="#54A24B"/>
+<text x="426.7142857142857" y="209.08251145992497" text-anchor="middle" font-size="10" fill="#333">7,848</text>
+<text x="390.5714285714286" y="445" text-anchor="middle" font-size="13" fill="#333">n=4</text>
+<rect x="468.28571428571433" y="299.06808044327147" width="31.142857142857142" height="120.93191955672856" rx="3" fill="#4C78A8"/>
+<text x="483.8571428571429" y="294.06808044327147" text-anchor="middle" font-size="10" fill="#333">4,609</text>
+<rect x="504.42857142857144" y="258.47756632865674" width="31.142857142857142" height="161.52243367134326" rx="3" fill="#F58518"/>
+<text x="520.0" y="253.47756632865674" text-anchor="middle" font-size="10" fill="#333">6,156</text>
+<rect x="540.5714285714287" y="230.29772653609297" width="31.142857142857142" height="189.70227346390703" rx="3" fill="#54A24B"/>
+<text x="556.1428571428572" y="225.29772653609297" text-anchor="middle" font-size="10" fill="#333">7,230</text>
+<text x="520.0" y="445" text-anchor="middle" font-size="13" fill="#333">n=6</text>
+<rect x="597.7142857142858" y="311.4262783411276" width="31.142857142857142" height="108.57372165887239" rx="3" fill="#4C78A8"/>
+<text x="613.2857142857143" y="306.4262783411276" text-anchor="middle" font-size="10" fill="#333">4,138</text>
+<rect x="633.8571428571429" y="269.78623574261854" width="31.142857142857142" height="150.21376425738146" rx="3" fill="#F58518"/>
+<text x="649.4285714285714" y="264.78623574261854" text-anchor="middle" font-size="10" fill="#333">5,725</text>
+<rect x="670.0" y="247.22137333888963" width="31.142857142857142" height="172.77862666111037" rx="3" fill="#54A24B"/>
+<text x="685.5714285714286" y="242.22137333888963" text-anchor="middle" font-size="10" fill="#333">6,585</text>
+<text x="649.4285714285714" y="445" text-anchor="middle" font-size="13" fill="#333">n=8</text>
+<rect x="727.1428571428572" y="324.2567640567363" width="31.142857142857142" height="95.74323594326373" rx="3" fill="#4C78A8"/>
+<text x="742.7142857142858" y="319.2567640567363" text-anchor="middle" font-size="10" fill="#333">3,649</text>
+<rect x="763.2857142857143" y="283.0102946396876" width="31.142857142857142" height="136.9897053603124" rx="3" fill="#F58518"/>
+<text x="778.8571428571429" y="278.0102946396876" text-anchor="middle" font-size="10" fill="#333">5,221</text>
+<rect x="799.4285714285716" y="266.4802210183513" width="31.142857142857142" height="153.5197789816487" rx="3" fill="#54A24B"/>
+<text x="815.0000000000001" y="261.4802210183513" text-anchor="middle" font-size="10" fill="#333">5,851</text>
+<text x="778.8571428571429" y="445" text-anchor="middle" font-size="13" fill="#333">n=10</text>
+<rect x="856.5714285714287" y="337.84815792316834" width="31.142857142857142" height="82.15184207683167" rx="3" fill="#4C78A8"/>
+<text x="872.1428571428572" y="332.84815792316834" text-anchor="middle" font-size="10" fill="#333">3,131</text>
+<rect x="892.7142857142858" y="300.3012764118473" width="31.142857142857142" height="119.69872358815269" rx="3" fill="#F58518"/>
+<text x="908.2857142857143" y="295.3012764118473" text-anchor="middle" font-size="10" fill="#333">4,562</text>
+<rect x="928.8571428571429" y="289.2025126946644" width="31.142857142857142" height="130.79748730533564" rx="3" fill="#54A24B"/>
+<text x="944.4285714285714" y="284.2025126946644" text-anchor="middle" font-size="10" fill="#333">4,985</text>
+<text x="908.2857142857143" y="445" text-anchor="middle" font-size="13" fill="#333">n=12</text>
+<rect x="80" y="25" width="14" height="14" fill="#4C78A8"/>
+<text x="100" y="37" font-size="13" fill="#333">nearest t1</text>
+<rect x="230" y="25" width="14" height="14" fill="#F58518"/>
+<text x="250" y="37" font-size="13" fill="#333">earliest t1</text>
+<rect x="380" y="25" width="14" height="14" fill="#54A24B"/>
+<text x="400" y="37" font-size="13" fill="#333">all t1</text>
+<text x="520.0" y="475" text-anchor="middle" font-size="14" fill="#333">n hours</text>
+<text x="20" y="250.0" text-anchor="middle" font-size="14" fill="#333" transform="rotate(-90 20 250.0)">Pair count</text>
+</svg>
+</div>
+
+</body>
+</html>
